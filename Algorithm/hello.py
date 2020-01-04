@@ -1,0 +1,5 @@
+hours = input("put your work hours: ")
+pay = input("put your work pay for an hours: ")
+amount = float(hours) * float(pay) 
+print("amount",amount)
+print("hello")
