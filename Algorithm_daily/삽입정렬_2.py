@@ -11,6 +11,7 @@ def ins_sort(a):
         value = a.pop(0)
         ins_idx = find_ind_idx(result, value)
         result.insert(ins_idx, value)
+        print(a, result)
     return result
 
 
@@ -19,7 +20,7 @@ def ins_sort_2(a):
     for i in range(1, n):
         key = a[i]
         j = i - 1
-        while j >= 0 and a[j] > key:
+        while j >= 0 and a[j] < key:
             a[j + 1] = a[j]
             j -= 1
         a[j + 1] = key
