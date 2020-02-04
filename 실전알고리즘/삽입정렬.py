@@ -1,9 +1,18 @@
-d = [2, 4, 5, 1, 3, 6, 7, 8, 9]
-
-
-def find_idx_idx(a):
+def find_idx(r, v):
+    for i in range(0, len(r)):
+        if v < r[i]:
+            return i
+    return len(r)
 
 
 def find(a):
-    s = len(a)
-    for i in range(0, )
+    result = []
+    while a:
+        value = a.pop(0)
+        ins_idx = find_idx(result, value)
+        result.insert(ins_idx, value)
+    return result
+
+
+d = [2, 4, 5, 1, 3]
+print(find(d))
